@@ -2,6 +2,8 @@
 
 int main()
 {
-    char c[4] = "EOF";
-    printf(c);
+    printf("%d\n",EOF != EOF);
+    printf("%d",getchar() != EOF);
 }
+
+//сделано

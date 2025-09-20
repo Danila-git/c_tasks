@@ -16,5 +16,7 @@ int main()
             new_line += 1;
         }
     }
-    printf("Amount of tabs: %d\n Amount of spaces: %d\n Amount of new lines: %d\n",tab,space,new_line);
+    printf("\nAmount of tabs: %d\n Amount of spaces: %d\n Amount of new lines: %d\n",tab,space,new_line);
 }
+
+//сделано

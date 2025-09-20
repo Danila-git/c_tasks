@@ -10,8 +10,10 @@ int main()
             str[i] = c;
             i += 1;
     }
-    for(int counter = 0; counter <= i; counter += 1)
+    for(int counter = 0; counter < i; counter += 1)
     {
         printf("%c\n",str[counter]);
     }
 }
+
+//сделано

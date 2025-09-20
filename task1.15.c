@@ -19,3 +19,5 @@ float transform(float celcius)
 {
     return celcius + 32.0 * (9.0/5.0);
 }
+
+//сделано
