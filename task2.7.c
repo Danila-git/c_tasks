@@ -7,5 +7,6 @@ int main()
 
 unsigned invert(unsigned x, int p, int n)
 {
-    return x ^ ~0 >>
+    unsigned y = ~0
+    return
 }

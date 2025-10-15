@@ -1,31 +1,37 @@
-
-//не сделано
-
 #include <stdio.h>
-#define MAXLINE 1000 /* максимальный размер вводимой строки */
-int getline(char line[] int MAXLINE);
+#define MAXSIZE 1000
 
-main()
-{
-int length = 0;
+int getline(char string[]);
 
-while((int c = getchar()) != EOF)
+int main()
 {
-    line[length] = c;
-    length+= 1
-}
-if(length > 80)
-{
-    for(int j= 0; j <= length; j += 1)
+    int length;
+    char string[MAXSIZE];
+    //пока строка больше 0 символов выполняем дальше
+    while((length = getline(string)) != 0)
     {
-        putchar(line[j]);
+        //если массив больше 80 символов, то печатаем строку
+        if(length > 80)
+        {
+                printf("%s\n",string);
+        }
     }
-}
-return 0;
+    return 0;
 }
 
-int line_check(char line[])
+//считываем строку до символа новой строки или конца файла
+int getline(char string[])
 {
-
+    int i = 0;
+    char c = 0;
+    while((c = getchar()) != '\n' && c != EOF)
+          {
+              string[i] = c;
+              i+=1;
+          }
+          string[i] = '\0';
+          return i;
 }
 
+
+//сделано

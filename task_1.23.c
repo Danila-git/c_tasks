@@ -30,40 +30,39 @@ int get_text(char text[])
     return length;
 }
 
-void change_text(char text[], char result_text[], int length)
+void change_text(char text[],char result_text[], int length)
 {
-    int k = 0;
+        int k = 0;
    for(int i = 0; i < length; i+=1)
    {
-       switch (text[i])
-           {
-            case ' ':
-                while(text[i] == ' ')
+       if(text[i] == '/')
+       {
+           i+=1;
+                if(text[i] == '/')
+                {
+                while(text[i] != '\n')
                 {
                     i+=1;
                 }
-                result_text[k++] = ' ';
                 result_text[k++] = text[i];
-                break;
-            case '\t':
-                while(text[i] == '\t')
+                }else if(text[i] == '*')
                 {
-                    i+=1;
-                }
-                result_text[k++] = ' ';
+                    while(text[++i] != '*' && text[++i] != '/')
+                    {
+                        i--;
+                    }
+                    i+=2;
                 result_text[k++] = text[i];
-                break;
-            case '\n':
-                while(text[i] == '\n')
+                }else
                 {
-                    i+=1;
+                result_text[k++] = text[i];
                 }
-                result_text[k++] = '\n';
-                result_text[k++] = text[i];
-                break;
-            default:
-                result_text[k++] = text[i];
-           }
+       }
+       else
+       {
+           result_text[k++] = text[i];
+       }
+
    }
 }
 

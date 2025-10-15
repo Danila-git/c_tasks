@@ -1,31 +1,57 @@
 #include <stdio.h>
 
+#define MAXLENGTH 1000
+
+void getline(char string[]);
+void htol(char string[]);
+
 int main()
 {
+    char text[MAXLENGTH];
 
-    char string1[100];
-    char string2[100];
-    scanf(string1);
-    scanf(string2);
-    squeeze(string1, string2);
+    getline(text);
+    htol(text);
 }
 
-
-void squeeze(char s1[],char s2[])
+void getline(char string[])
 {
-    int i,j,k, delet = 0;
-    for(i = k = 0; s1[i] != '/0'; i++)
+    char c;
+    int i = 0;
+    while((c = getchar()) != EOF && c != '\n' && c != ' ')
     {
-        for(j = 0; s2[j] != '/0'; j++)sdfghjk
+        string[i] = c;
+        i+=1;
+    }
+    string[i] = '\0';
+}
+
+void htol(char string[])
+{
+    int digit, result = 0;
+    for(int i = 0; string[i] != '\0'; i+=1)
+    {
+        if(string[i] == '0')
         {
-            if(s1[i] = s2[j])
+            i+=1;
+            if(string[i] == 'x' || string[i] == 'X')
             {
-                delet = 1;
-            }
+                i+=1;
+                while(string[i] != '\0')
+                {
+                    if (string[i] >= '0' && string[i] <= '9') {
+            digit = string[i] - '0';
+        } else if (string[i] >= 'a' && string[i] <= 'f') {
+            digit = string[i] - 'a' + 10;
+        } else if (string[i] >= 'A' && string[i] <= 'F') {
+            digit = string[i] - 'A' + 10;
         }
-        if(!delet)
-        {
-        s1[k++] = s1[i];
+        result = result * 16 + digit ;
+        i+=1;
+            }
+               printf("%d", result);
         }
     }
 }
+}
+
+//сделано
