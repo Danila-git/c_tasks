@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 int main()
 {
@@ -15,13 +15,9 @@ int main()
         }
         if(space <= 1)
            {
-            str[i] = c;
+            putchar(c);
             i += 1;
            }
-    }
-    for(int counter = 0; counter <= i; counter += 1)
-    {
-        putchar(str[counter]);
     }
 }
 
