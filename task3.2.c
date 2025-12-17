@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void escape(char s[]);
-void getline(char text[]);
+void my_getline(char text[]);
 
 int main()
 {
   char start_string[100];
-  getline(start_string);
+  my_getline(start_string);
   escape(start_string);
 }
 
@@ -40,7 +40,7 @@ void escape(char s[])
     printf("%s",t);
 }
 
-void getline(char text[])
+void my_getline(char text[])
 {
     int c,i = 0;
     while((c = getchar()) != EOF)
@@ -51,4 +51,4 @@ void getline(char text[])
     text[i] = '\0';
 }
 
-//сделано
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ

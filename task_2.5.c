@@ -3,14 +3,14 @@
 #define MAXLENGTH 1000
 
 int any(char s1[], char s2[]);
-void getline(char string[]);
+void my_getline(char string[]);
 
 int main()
 {
     char string1[MAXLENGTH];
     char string2[MAXLENGTH];
-    getline(string1);
-    getline(string2);
+    my_getline(string1);
+    my_getline(string2);
     printf("%d",any(string1,string2));
 }
 
@@ -29,7 +29,7 @@ int any(char s1[], char s2[])
     return -1;
 }
 
-void getline(char string[])
+void my_getline(char string[])
 {
     char c;
     int i = 0;
@@ -41,4 +41,4 @@ void getline(char string[])
     string[i] = '\0';
 }
 
-//сделано
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ

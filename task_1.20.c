@@ -5,18 +5,18 @@
 const tab_width = 4;
 int char_amount_of_start_text = 0;
 
-void getline(char text[]);
+void my_getline(char text[]);
 void detab(char start_text[], char result_text[]);
 
 int main()
 {
     char start_text[MAXLENGTH];
     char result_text[MAXLENGTH+3000];
-    getline(start_text);
+    my_getline(start_text);
     detab(start_text, result_text);
 }
 
-void getline(char text[])
+void my_getline(char text[])
 {
     int c;
     while((c = getchar()) != EOF && char_amount_of_start_text != MAXLENGTH)
@@ -51,4 +51,4 @@ void detab(char start_text[], char result_text[])
       result_text[k] = '\0';
 }
 
-//не сделано
+//пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ

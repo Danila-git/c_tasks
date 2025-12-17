@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void getline(char text[]);
+void my_getline(char text[]);
 void expand(char start_text[], char result_text[]);
 
 int main()
 {
     char start_text[100], result_text[600];
-    getline(start_text);
+    my_getline(start_text);
     expand(start_text, result_text);
     printf("%s", result_text);
 }
@@ -51,7 +51,7 @@ void expand(char start_text[], char result_text[])
         }
     }
 }
-void getline(char text[])
+void my_getline(char text[])
 {
     int c,i = 0;
     while((c = getchar()) != EOF)
@@ -62,5 +62,5 @@ void getline(char text[])
     text[i] = '\0';
 }
 
-//сделано
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 

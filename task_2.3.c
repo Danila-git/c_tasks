@@ -2,18 +2,18 @@
 
 #define MAXLENGTH 1000
 
-void getline(char string[]);
+void my_getline(char string[]);
 void htol(char string[]);
 
 int main()
 {
     char text[MAXLENGTH];
 
-    getline(text);
+    my_getline(text);
     htol(text);
 }
 
-void getline(char string[])
+void my_getline(char string[])
 {
     char c;
     int i = 0;
@@ -54,4 +54,4 @@ void htol(char string[])
 }
 }
 
-//сделано
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
