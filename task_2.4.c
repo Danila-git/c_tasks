@@ -16,7 +16,7 @@ int main()
 
 void my_getline(char string[])
 {
-    int c;  // Изменено с char на int
+    int c;  
     int i = 0;
     while ((c = getchar()) != EOF && c != '\n' && c != ' ')
     {
